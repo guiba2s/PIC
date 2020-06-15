@@ -1,0 +1,709 @@
+
+
+Microchip MPLAB XC8 Assembler V2.20 build 20200408173844 
+                                                                                               Sun Jun 14 23:47:43 2020
+
+Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1 
+     1                           	processor	16F87
+     2                           	pagewidth 120
+     3                           	opt	flic
+     4                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     5                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1,noexec
+     6                           	psect	maintext,global,class=CODE,split=1,delta=2
+     7                           	psect	text1,local,class=CODE,merge=1,delta=2
+     8                           	psect	text2,local,class=CODE,merge=1,delta=2
+     9                           	psect	text3,local,class=CODE,merge=1,delta=2
+    10                           	psect	text4,local,class=CODE,merge=1,delta=2
+    11                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=2,noexec
+    12                           	dabs	1,0x7E,2
+    13  0000                     
+    14                           ; Version 2.20
+    15                           ; Generated 12/02/2020 GMT
+    16                           ; 
+    17                           ; Copyright © 2020, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    18                           ; All rights reserved.
+    19                           ; 
+    20                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    21                           ; 
+    22                           ; Redistribution and use in source and binary forms, with or without modification, are
+    23                           ; permitted provided that the following conditions are met:
+    24                           ; 
+    25                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    26                           ;        conditions and the following disclaimer.
+    27                           ; 
+    28                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    29                           ;        of conditions and the following disclaimer in the documentation and/or other
+    30                           ;        materials provided with the distribution.
+    31                           ; 
+    32                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    33                           ;        software without specific prior written permission.
+    34                           ; 
+    35                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    36                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    37                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    38                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    39                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    40                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    41                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    42                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    43                           ; 
+    44                           ; 
+    45                           ; Code-generator required, PIC16F87 Definitions
+    46                           ; 
+    47                           ; SFR Addresses
+    48  0000                     	;# 
+    49  0001                     	;# 
+    50  0002                     	;# 
+    51  0003                     	;# 
+    52  0004                     	;# 
+    53  0005                     	;# 
+    54  0006                     	;# 
+    55  000A                     	;# 
+    56  000B                     	;# 
+    57  000C                     	;# 
+    58  000D                     	;# 
+    59  000E                     	;# 
+    60  000E                     	;# 
+    61  000F                     	;# 
+    62  0010                     	;# 
+    63  0011                     	;# 
+    64  0012                     	;# 
+    65  0013                     	;# 
+    66  0014                     	;# 
+    67  0015                     	;# 
+    68  0015                     	;# 
+    69  0016                     	;# 
+    70  0017                     	;# 
+    71  0018                     	;# 
+    72  0019                     	;# 
+    73  001A                     	;# 
+    74  0081                     	;# 
+    75  0085                     	;# 
+    76  0086                     	;# 
+    77  008C                     	;# 
+    78  008D                     	;# 
+    79  008E                     	;# 
+    80  008F                     	;# 
+    81  0090                     	;# 
+    82  0092                     	;# 
+    83  0093                     	;# 
+    84  0094                     	;# 
+    85  0098                     	;# 
+    86  0099                     	;# 
+    87  009C                     	;# 
+    88  009D                     	;# 
+    89  0105                     	;# 
+    90  010C                     	;# 
+    91  010D                     	;# 
+    92  010E                     	;# 
+    93  010F                     	;# 
+    94  018C                     	;# 
+    95  018D                     	;# 
+    96  0000                     	;# 
+    97  0001                     	;# 
+    98  0002                     	;# 
+    99  0003                     	;# 
+   100  0004                     	;# 
+   101  0005                     	;# 
+   102  0006                     	;# 
+   103  000A                     	;# 
+   104  000B                     	;# 
+   105  000C                     	;# 
+   106  000D                     	;# 
+   107  000E                     	;# 
+   108  000E                     	;# 
+   109  000F                     	;# 
+   110  0010                     	;# 
+   111  0011                     	;# 
+   112  0012                     	;# 
+   113  0013                     	;# 
+   114  0014                     	;# 
+   115  0015                     	;# 
+   116  0015                     	;# 
+   117  0016                     	;# 
+   118  0017                     	;# 
+   119  0018                     	;# 
+   120  0019                     	;# 
+   121  001A                     	;# 
+   122  0081                     	;# 
+   123  0085                     	;# 
+   124  0086                     	;# 
+   125  008C                     	;# 
+   126  008D                     	;# 
+   127  008E                     	;# 
+   128  008F                     	;# 
+   129  0090                     	;# 
+   130  0092                     	;# 
+   131  0093                     	;# 
+   132  0094                     	;# 
+   133  0098                     	;# 
+   134  0099                     	;# 
+   135  009C                     	;# 
+   136  009D                     	;# 
+   137  0105                     	;# 
+   138  010C                     	;# 
+   139  010D                     	;# 
+   140  010E                     	;# 
+   141  010F                     	;# 
+   142  018C                     	;# 
+   143  018D                     	;# 
+   144  0006                     _PORTB	set	6
+   145  0006                     _PORTBbits	set	6
+   146  0086                     _TRISBbits	set	134
+   147                           
+   148                           	psect	cinit
+   149  07FD                     start_initialization:	
+   150                           ; #config settings
+   151                           
+   152  07FD                     __initialization:
+   153  07FD                     end_of_initialization:	
+   154                           ;End of C runtime variable initialization code
+   155                           
+   156  07FD                     __end_of__initialization:
+   157  07FD  0183               	clrf	3
+   158  07FE  118A  2FA6         	ljmp	_main	;jump to C main() function
+   159                           
+   160                           	psect	cstackCOMMON
+   161  0070                     __pcstackCOMMON:
+   162  0070                     ?_configMCU:
+   163  0070                     ??_configMCU:	
+   164                           ; 1 bytes @ 0x0
+   165                           
+   166  0070                     ?_configPINS:	
+   167                           ; 1 bytes @ 0x0
+   168                           
+   169  0070                     ??_configPINS:	
+   170                           ; 1 bytes @ 0x0
+   171                           
+   172  0070                     ?_bitStatus:	
+   173                           ; 1 bytes @ 0x0
+   174                           
+   175  0070                     ??_bitStatus:	
+   176                           ; 1 bytes @ 0x0
+   177                           
+   178  0070                     ?_motorControl:	
+   179                           ; 1 bytes @ 0x0
+   180                           
+   181  0070                     ?_main:	
+   182                           ; 1 bytes @ 0x0
+   183                           
+   184  0070                     motorControl@status:	
+   185                           ; 1 bytes @ 0x0
+   186                           
+   187                           
+   188                           ; 2 bytes @ 0x0
+   189  0070                     	ds	2
+   190  0072                     motorControl@direction:
+   191                           
+   192                           ; 2 bytes @ 0x2
+   193  0072                     	ds	2
+   194  0074                     ??_motorControl:
+   195  0074                     ??_main:	
+   196                           ; 1 bytes @ 0x4
+   197                           
+   198                           
+   199                           	psect	maintext
+   200  07A6                     __pmaintext:	
+   201                           ; 1 bytes @ 0x4
+   202 ;;
+   203 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   204 ;;
+   205 ;; *************** function _main *****************
+   206 ;; Defined at:
+   207 ;;		line 38 in file "Main.c"
+   208 ;; Parameters:    Size  Location     Type
+   209 ;;		None
+   210 ;; Auto vars:     Size  Location     Type
+   211 ;;		None
+   212 ;; Return value:  Size  Location     Type
+   213 ;;                  1    wreg      void 
+   214 ;; Registers used:
+   215 ;;		wreg, status,2, status,0, pclath, cstack
+   216 ;; Tracked objects:
+   217 ;;		On entry : B00/0
+   218 ;;		On exit  : 0/0
+   219 ;;		Unchanged: 0/0
+   220 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   221 ;;      Params:         0       0       0       0       0
+   222 ;;      Locals:         0       0       0       0       0
+   223 ;;      Temps:          0       0       0       0       0
+   224 ;;      Totals:         0       0       0       0       0
+   225 ;;Total ram usage:        0 bytes
+   226 ;; Hardware stack levels required when called:    1
+   227 ;; This function calls:
+   228 ;;		_bitStatus
+   229 ;;		_configMCU
+   230 ;;		_configPINS
+   231 ;;		_motorControl
+   232 ;; This function is called by:
+   233 ;;		Startup code after reset
+   234 ;; This function uses a non-reentrant model
+   235 ;;
+   236                           
+   237                           
+   238                           ;psect for function _main
+   239  07A6                     _main:
+   240  07A6                     l666:	
+   241                           ;incstack = 0
+   242                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
+   243                           
+   244                           
+   245                           ;Main.c: 40:     configMCU();
+   246  07A6  118A  2798  118A   	fcall	_configMCU
+   247                           
+   248                           ;Main.c: 41:     configPINS();
+   249  07A9  118A  2799  118A   	fcall	_configPINS
+   250  07AC                     l668:
+   251                           
+   252                           ;Main.c: 42:     bitStatus();
+   253  07AC  118A  27BD  118A   	fcall	_bitStatus
+   254  07AF                     l670:
+   255                           
+   256                           ;Main.c: 45:     {;Main.c: 47:        motorControl(1, 0b110);
+   257  07AF  3001               	movlw	1
+   258  07B0  00F0               	movwf	motorControl@status
+   259  07B1  3000               	movlw	0
+   260  07B2  00F1               	movwf	motorControl@status+1
+   261  07B3  3006               	movlw	6
+   262  07B4  00F2               	movwf	motorControl@direction
+   263  07B5  3000               	movlw	0
+   264  07B6  00F3               	movwf	motorControl@direction+1
+   265  07B7  118A  27DA  118A   	fcall	_motorControl
+   266  07BA  2FAF               	goto	l670
+   267  07BB  118A  2800         	ljmp	start
+   268  07BD                     __end_of_main:
+   269                           
+   270                           	psect	text1
+   271  07DA                     __ptext1:	
+   272 ;; *************** function _motorControl *****************
+   273 ;; Defined at:
+   274 ;;		line 96 in file "Main.c"
+   275 ;; Parameters:    Size  Location     Type
+   276 ;;  status          2    0[COMMON] int 
+   277 ;;  direction       2    2[COMMON] int 
+   278 ;; Auto vars:     Size  Location     Type
+   279 ;;		None
+   280 ;; Return value:  Size  Location     Type
+   281 ;;                  1    wreg      void 
+   282 ;; Registers used:
+   283 ;;		wreg, status,2, status,0
+   284 ;; Tracked objects:
+   285 ;;		On entry : 0/0
+   286 ;;		On exit  : 0/0
+   287 ;;		Unchanged: 0/0
+   288 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   289 ;;      Params:         4       0       0       0       0
+   290 ;;      Locals:         0       0       0       0       0
+   291 ;;      Temps:          0       0       0       0       0
+   292 ;;      Totals:         4       0       0       0       0
+   293 ;;Total ram usage:        4 bytes
+   294 ;; Hardware stack levels used:    1
+   295 ;; This function calls:
+   296 ;;		Nothing
+   297 ;; This function is called by:
+   298 ;;		_main
+   299 ;; This function uses a non-reentrant model
+   300 ;;
+   301                           
+   302                           
+   303                           ;psect for function _motorControl
+   304  07DA                     _motorControl:
+   305  07DA                     l654:	
+   306                           ;incstack = 0
+   307                           ; Regs used in _motorControl: [wreg+status,2+status,0]
+   308                           
+   309  07DA  0370               	decf	motorControl@status,w
+   310  07DB  0471               	iorwf	motorControl@status+1,w
+   311  07DC  1D03               	btfss	3,2
+   312  07DD  2FDF               	goto	u71
+   313  07DE  2FE0               	goto	u70
+   314  07DF                     u71:
+   315  07DF  2FEB               	goto	l660
+   316  07E0                     u70:
+   317  07E0                     l656:
+   318  07E0  3006               	movlw	6
+   319  07E1  0672               	xorwf	motorControl@direction,w
+   320  07E2  0473               	iorwf	motorControl@direction+1,w
+   321  07E3  1D03               	btfss	3,2
+   322  07E4  2FE6               	goto	u81
+   323  07E5  2FE7               	goto	u80
+   324  07E6                     u81:
+   325  07E6  2FEB               	goto	l660
+   326  07E7                     u80:
+   327  07E7                     l658:
+   328  07E7  3006               	movlw	6
+   329  07E8  1283               	bcf	3,5	;RP0=0, select bank0
+   330  07E9  1303               	bcf	3,6	;RP1=0, select bank0
+   331  07EA  0086               	movwf	6	;volatile
+   332  07EB                     l660:
+   333  07EB  0370               	decf	motorControl@status,w
+   334  07EC  0471               	iorwf	motorControl@status+1,w
+   335  07ED  1D03               	btfss	3,2
+   336  07EE  2FF0               	goto	u91
+   337  07EF  2FF1               	goto	u90
+   338  07F0                     u91:
+   339  07F0  2FFC               	goto	l35
+   340  07F1                     u90:
+   341  07F1                     l662:
+   342  07F1  3005               	movlw	5
+   343  07F2  0672               	xorwf	motorControl@direction,w
+   344  07F3  0473               	iorwf	motorControl@direction+1,w
+   345  07F4  1D03               	btfss	3,2
+   346  07F5  2FF7               	goto	u101
+   347  07F6  2FF8               	goto	u100
+   348  07F7                     u101:
+   349  07F7  2FFC               	goto	l35
+   350  07F8                     u100:
+   351  07F8                     l664:
+   352  07F8  3005               	movlw	5
+   353  07F9  1283               	bcf	3,5	;RP0=0, select bank0
+   354  07FA  1303               	bcf	3,6	;RP1=0, select bank0
+   355  07FB  0086               	movwf	6	;volatile
+   356  07FC                     l35:
+   357  07FC  0008               	return
+   358  07FD                     __end_of_motorControl:
+   359                           
+   360                           	psect	text2
+   361  0799                     __ptext2:	
+   362 ;; *************** function _configPINS *****************
+   363 ;; Defined at:
+   364 ;;		line 78 in file "Main.c"
+   365 ;; Parameters:    Size  Location     Type
+   366 ;;		None
+   367 ;; Auto vars:     Size  Location     Type
+   368 ;;		None
+   369 ;; Return value:  Size  Location     Type
+   370 ;;                  1    wreg      void 
+   371 ;; Registers used:
+   372 ;;		None
+   373 ;; Tracked objects:
+   374 ;;		On entry : 0/0
+   375 ;;		On exit  : 0/0
+   376 ;;		Unchanged: 0/0
+   377 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   378 ;;      Params:         0       0       0       0       0
+   379 ;;      Locals:         0       0       0       0       0
+   380 ;;      Temps:          0       0       0       0       0
+   381 ;;      Totals:         0       0       0       0       0
+   382 ;;Total ram usage:        0 bytes
+   383 ;; Hardware stack levels used:    1
+   384 ;; This function calls:
+   385 ;;		Nothing
+   386 ;; This function is called by:
+   387 ;;		_main
+   388 ;; This function uses a non-reentrant model
+   389 ;;
+   390                           
+   391                           
+   392                           ;psect for function _configPINS
+   393  0799                     _configPINS:
+   394  0799                     l630:	
+   395                           ;incstack = 0
+   396                           ; Regs used in _configPINS: []
+   397                           
+   398  0799  1683               	bsf	3,5	;RP0=1, select bank1
+   399  079A  1303               	bcf	3,6	;RP1=0, select bank1
+   400  079B  1006               	bcf	6,0	;volatile
+   401  079C  1086               	bcf	6,1	;volatile
+   402  079D  1106               	bcf	6,2	;volatile
+   403  079E  1186               	bcf	6,3	;volatile
+   404  079F  1283               	bcf	3,5	;RP0=0, select bank0
+   405  07A0  1303               	bcf	3,6	;RP1=0, select bank0
+   406  07A1  1006               	bcf	6,0	;volatile
+   407  07A2  1086               	bcf	6,1	;volatile
+   408  07A3  1106               	bcf	6,2	;volatile
+   409  07A4  1186               	bcf	6,3	;volatile
+   410  07A5                     l30:
+   411  07A5  0008               	return
+   412  07A6                     __end_of_configPINS:
+   413                           
+   414                           	psect	text3
+   415  0798                     __ptext3:	
+   416 ;; *************** function _configMCU *****************
+   417 ;; Defined at:
+   418 ;;		line 58 in file "Main.c"
+   419 ;; Parameters:    Size  Location     Type
+   420 ;;		None
+   421 ;; Auto vars:     Size  Location     Type
+   422 ;;		None
+   423 ;; Return value:  Size  Location     Type
+   424 ;;                  1    wreg      void 
+   425 ;; Registers used:
+   426 ;;		None
+   427 ;; Tracked objects:
+   428 ;;		On entry : 0/0
+   429 ;;		On exit  : 0/0
+   430 ;;		Unchanged: 0/0
+   431 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   432 ;;      Params:         0       0       0       0       0
+   433 ;;      Locals:         0       0       0       0       0
+   434 ;;      Temps:          0       0       0       0       0
+   435 ;;      Totals:         0       0       0       0       0
+   436 ;;Total ram usage:        0 bytes
+   437 ;; Hardware stack levels used:    1
+   438 ;; This function calls:
+   439 ;;		Nothing
+   440 ;; This function is called by:
+   441 ;;		_main
+   442 ;; This function uses a non-reentrant model
+   443 ;;
+   444                           
+   445                           
+   446                           ;psect for function _configMCU
+   447  0798                     _configMCU:
+   448  0798                     l27:	
+   449                           ;incstack = 0
+   450                           ; Regs used in _configMCU: []
+   451                           
+   452  0798  0008               	return
+   453  0799                     __end_of_configMCU:
+   454                           
+   455                           	psect	text4
+   456  07BD                     __ptext4:	
+   457 ;; *************** function _bitStatus *****************
+   458 ;; Defined at:
+   459 ;;		line 110 in file "Main.c"
+   460 ;; Parameters:    Size  Location     Type
+   461 ;;		None
+   462 ;; Auto vars:     Size  Location     Type
+   463 ;;		None
+   464 ;; Return value:  Size  Location     Type
+   465 ;;                  1    wreg      void 
+   466 ;; Registers used:
+   467 ;;		wreg, status,0
+   468 ;; Tracked objects:
+   469 ;;		On entry : 0/0
+   470 ;;		On exit  : 0/0
+   471 ;;		Unchanged: 0/0
+   472 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   473 ;;      Params:         0       0       0       0       0
+   474 ;;      Locals:         0       0       0       0       0
+   475 ;;      Temps:          3       0       0       0       0
+   476 ;;      Totals:         3       0       0       0       0
+   477 ;;Total ram usage:        3 bytes
+   478 ;; Hardware stack levels used:    1
+   479 ;; This function calls:
+   480 ;;		Nothing
+   481 ;; This function is called by:
+   482 ;;		_main
+   483 ;; This function uses a non-reentrant model
+   484 ;;
+   485                           
+   486                           
+   487                           ;psect for function _bitStatus
+   488  07BD                     _bitStatus:
+   489  07BD                     l632:	
+   490                           ;incstack = 0
+   491                           ; Regs used in _bitStatus: [wreg+status,0]
+   492                           
+   493  07BD  1003               	clrc
+   494  07BE  1283               	bcf	3,5	;RP0=0, select bank0
+   495  07BF  1303               	bcf	3,6	;RP1=0, select bank0
+   496  07C0  1D86               	btfss	6,3	;volatile
+   497  07C1  1403               	setc
+   498  07C2  1803               	btfsc	3,0
+   499  07C3  2FC5               	goto	u11
+   500  07C4  2FC9               	goto	u10
+   501  07C5                     u11:
+   502  07C5  1283               	bcf	3,5	;RP0=0, select bank0
+   503  07C6  1303               	bcf	3,6	;RP1=0, select bank0
+   504  07C7  1586               	bsf	6,3	;volatile
+   505  07C8  2FCC               	goto	u24
+   506  07C9                     u10:
+   507  07C9  1283               	bcf	3,5	;RP0=0, select bank0
+   508  07CA  1303               	bcf	3,6	;RP1=0, select bank0
+   509  07CB  1186               	bcf	6,3	;volatile
+   510  07CC                     u24:
+   511  07CC                     l634:
+   512  07CC  300B               	movlw	11
+   513  07CD  00F2               	movwf	??_bitStatus+2
+   514  07CE  3026               	movlw	38
+   515  07CF  00F1               	movwf	??_bitStatus+1
+   516  07D0  305D               	movlw	93
+   517  07D1  00F0               	movwf	??_bitStatus
+   518  07D2                     u117:
+   519  07D2  0BF0               	decfsz	??_bitStatus,f
+   520  07D3  2FD2               	goto	u117
+   521  07D4  0BF1               	decfsz	??_bitStatus+1,f
+   522  07D5  2FD2               	goto	u117
+   523  07D6  0BF2               	decfsz	??_bitStatus+2,f
+   524  07D7  2FD2               	goto	u117
+   525  07D8  2FD9               	nop2
+   526  07D9                     l38:
+   527  07D9  0008               	return
+   528  07DA                     __end_of_bitStatus:
+   529  007E                     btemp	set	126	;btemp
+   530  007E                     wtemp0	set	126
+   531                           
+   532                           	psect	config
+   533                           
+   534                           ;Config register CONFIG1 @ 0x2007
+   535                           ;	Oscillator Selection bits
+   536                           ;	FOSC = LP, LP oscillator
+   537                           ;	Watchdog Timer Enable bit
+   538                           ;	WDTE = OFF, WDT disabled
+   539                           ;	Power-up Timer Enable bit
+   540                           ;	PWRTE = ON, PWRT enabled
+   541                           ;	RA5/MCLR/VPP Pin Function Select bit
+   542                           ;	MCLRE = OFF, RA5/MCLR/VPP pin function is digital I/O, MCLR internally tied to VDD
+   543                           ;	Brown-out Reset Enable bit
+   544                           ;	BOREN = OFF, BOR disabled
+   545                           ;	Low-Voltage Programming Enable bit
+   546                           ;	LVP = OFF, RB3 is digital I/O, HV on MCLR must be used for programming
+   547                           ;	Data EE Memory Code Protection bit
+   548                           ;	CPD = ON, Data EE memory code-protected
+   549                           ;	Flash Program Memory Write Enable bits
+   550                           ;	WRT = ALL, 0000h to 0FFFh write-protected
+   551                           ;	In-Circuit Debugger Mode bit
+   552                           ;	DEBUG = 0x1, unprogrammed default
+   553                           ;	CCP1 Pin Selection bit
+   554                           ;	CCPMX = RB3, CCP1 function on RB3
+   555                           ;	Flash Program Memory Code Protection bit
+   556                           ;	CP = ON, 0000h to 0FFFh code-protected (all protected)
+   557  2007                     	org	8199
+   558  2007  0800               	dw	2048
+   559                           
+   560                           ;Config register CONFIG2 @ 0x2008
+   561                           ;	Fail-Safe Clock Monitor Enable bit
+   562                           ;	FCMEN = OFF, Fail-Safe Clock Monitor disabled
+   563                           ;	Internal External Switchover bit
+   564                           ;	IESO = OFF, Internal External Switchover mode disabled
+   565  2008                     	org	8200
+   566  2008  3FFC               	dw	16380
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14      4       4
+    BANK0            80      0       0
+    BANK1            80      0       0
+    BANK3            96      0       0
+    BANK2            96      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    _main->_motorControl
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0     240
+                          _bitStatus
+                          _configMCU
+                         _configPINS
+                       _motorControl
+ ---------------------------------------------------------------------------------
+ (1) _motorControl                                         4     0      4     240
+                                              0 COMMON     4     0      4
+ ---------------------------------------------------------------------------------
+ (1) _configPINS                                           0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _configMCU                                            0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _bitStatus                                            3     3      0       0
+                                              0 COMMON     3     3      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _bitStatus
+   _configMCU
+   _configPINS
+   _motorControl
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            E      0       0       0        0.0%
+EEDATA             100      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMMON               E      4       4       1       28.6%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+ABS                  0      0       0       3        0.0%
+BITBANK0            50      0       0       4        0.0%
+BITSFR3              0      0       0       4        0.0%
+SFR3                 0      0       0       4        0.0%
+BANK0               50      0       0       5        0.0%
+BITSFR2              0      0       0       5        0.0%
+SFR2                 0      0       0       5        0.0%
+BITBANK1            50      0       0       6        0.0%
+BANK1               50      0       0       7        0.0%
+BITBANK3            60      0       0       8        0.0%
+BANK3               60      0       0       9        0.0%
+BITBANK2            60      0       0      10        0.0%
+BANK2               60      0       0      11        0.0%
+DATA                 0      0       0      12        0.0%
+
+
+Microchip Technology PIC Macro Assembler V2.20 build 20200408173844 
+Symbol Table                                                                                   Sun Jun 14 23:47:43 2020
+
+                     l30 07A5                       l27 0798                       l35 07FC  
+                     l38 07D9                       u10 07C9                       u11 07C5  
+                     u24 07CC                       u70 07E0                       u71 07DF  
+                     u80 07E7                       u81 07E6                       u90 07F1  
+                     u91 07F0                      l630 0799                      l632 07BD  
+                    l634 07CC                      l660 07EB                      l662 07F1  
+                    l654 07DA                      l670 07AF                      l664 07F8  
+                    l656 07E0                      l658 07E7                      l666 07A6  
+                    l668 07AC                      u100 07F8                      u101 07F7  
+                    u117 07D2                     _main 07A6                     btemp 007E  
+                   start 0000                    ?_main 0070                    _PORTB 0006  
+                  status 0003                    wtemp0 007E          __initialization 07FD  
+           __end_of_main 07BD    motorControl@direction 0072                   ??_main 0074  
+__end_of__initialization 07FD           __pcstackCOMMON 0070       __size_of_bitStatus 001D  
+     __size_of_configMCU 0001               __pmaintext 07A6               _configPINS 0799  
+      __end_of_bitStatus 07DA        __end_of_configMCU 0799            ?_motorControl 0070  
+                __ptext1 07DA                  __ptext2 0799                  __ptext3 0798  
+                __ptext4 07BD     end_of_initialization 07FD           ??_motorControl 0074  
+              _PORTBbits 0006              ?_configPINS 0070                _TRISBbits 0086  
+    start_initialization 07FD      __size_of_configPINS 000D                ___latbits 0001  
+   __end_of_motorControl 07FD       motorControl@status 0070                _bitStatus 07BD  
+              _configMCU 0798               ?_bitStatus 0070               ?_configMCU 0070  
+           ??_configPINS 0070       __end_of_configPINS 07A6    __size_of_motorControl 0023  
+          __size_of_main 0017              ??_bitStatus 0070              ??_configMCU 0070  
+           _motorControl 07DA  
