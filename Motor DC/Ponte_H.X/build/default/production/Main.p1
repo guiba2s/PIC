@@ -1,20 +1,16 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"32 Main.c
-[; ;Main.c: 32: void configMCU();
-[; ;Main.c: 32: }
+"44 Main.c
+[; ;Main.c: 44: void configMCU();
 [v _configMCU `(v ~T0 @X0 0 e? ]
-"33
-[; ;Main.c: 33: void configPINS();
-[; ;Main.c: 33: 
+"45
+[; ;Main.c: 45: void configPINS();
 [v _configPINS `(v ~T0 @X0 0 e? ]
-"35
-[; ;Main.c: 35: void bitStatus();
-[; ;Main.c: 35: {
+"47
+[; ;Main.c: 47: void bitStatus();
 [v _bitStatus `(v ~T0 @X0 0 e? ]
-"34
-[; ;Main.c: 34: void motorControl(int status, int direction);
-[; ;Main.c: 34: void bitStatus()
+"46
+[; ;Main.c: 46: void motorControl(int status, int direction);
 [v _motorControl `(v ~T0 @X0 0 ef2`i`i ]
 "1046 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f87.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f87.h: 1046:     struct {
@@ -190,142 +186,141 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f87.h: 1894: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
 [v $root$_main `(v ~T0 @X0 0 e ]
-"38 Main.c
-[; ;Main.c: 38: void main(void) {
-[; ;Main.c: 38: }
+"53 Main.c
+[; ;Main.c: 53: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"40
-[; ;Main.c: 40:     configMCU();
+"55
+[; ;Main.c: 55:     configMCU();
 [e ( _configMCU ..  ]
-"41
-[; ;Main.c: 41:     configPINS();
+"56
+[; ;Main.c: 56:     configPINS();
 [e ( _configPINS ..  ]
-"42
-[; ;Main.c: 42:     bitStatus();
+"57
+[; ;Main.c: 57:     bitStatus();
 [e ( _bitStatus ..  ]
-"44
-[; ;Main.c: 44:     while(1)
+"59
+[; ;Main.c: 59:     while(1)
 [e :U 80 ]
-"45
-[; ;Main.c: 45:     {
+"60
+[; ;Main.c: 60:     {
 {
-"47
-[; ;Main.c: 47:        motorControl(1, 0b110);
+"62
+[; ;Main.c: 62:        motorControl(1, 0b110);
 [e ( _motorControl (2 , -> 1 `i -> 6 `i ]
-"49
-[; ;Main.c: 49:     }
+"64
+[; ;Main.c: 64:     }
 }
 [e :U 79 ]
 [e $U 80  ]
 [e :U 81 ]
-"52
-[; ;Main.c: 52:     return;
+"67
+[; ;Main.c: 67:     return;
 [e $UE 78  ]
-"53
-[; ;Main.c: 53: }
+"68
+[; ;Main.c: 68: }
 [e :UE 78 ]
 }
-"58
-[; ;Main.c: 58: void configMCU()
+"74
+[; ;Main.c: 74: void configMCU()
 [v _configMCU `(v ~T0 @X0 1 ef ]
-"59
-[; ;Main.c: 59: {
+"75
+[; ;Main.c: 75: {
 {
 [e :U _configMCU ]
 [f ]
-"76
+"92
 [e :UE 82 ]
 }
-"61
+"77
 [p x FOSC = LP ]
-"62
-[p x WDTE = OFF ]
-"63
-[p x PWRTE = ON ]
-"64
-[p x MCLRE = OFF ]
-"65
-[p x BOREN = OFF ]
-"66
-[p x LVP = OFF ]
-"67
-[p x CPD = ON ]
-"68
-[p x WRT = ALL ]
-"69
-[p x CCPMX = RB3 ]
-"70
-[p x CP = ON ]
-"73
-[p x FCMEN = OFF ]
-"74
-[p x IESO = OFF ]
 "78
-[v _configPINS `(v ~T0 @X0 1 ef ]
+[p x WDTE = OFF ]
 "79
+[p x PWRTE = ON ]
+"80
+[p x MCLRE = OFF ]
+"81
+[p x BOREN = OFF ]
+"82
+[p x LVP = OFF ]
+"83
+[p x CPD = ON ]
+"84
+[p x WRT = ALL ]
+"85
+[p x CCPMX = RB3 ]
+"86
+[p x CP = ON ]
+"89
+[p x FCMEN = OFF ]
+"90
+[p x IESO = OFF ]
+"94
+[v _configPINS `(v ~T0 @X0 1 ef ]
+"95
 {
 [e :U _configPINS ]
 [f ]
-"81
+"97
 [e = . . _TRISBbits 0 0 -> -> 0 `i `uc ]
-"82
+"98
 [e = . . _TRISBbits 0 1 -> -> 0 `i `uc ]
-"83
+"99
 [e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
-"84
+"100
 [e = . . _TRISBbits 0 3 -> -> 0 `i `uc ]
-"86
+"102
 [e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
-"87
+"103
 [e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
-"88
+"104
 [e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
-"89
+"105
 [e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
-"92
+"108
 [e :UE 83 ]
 }
-"96
+"112
 [v _motorControl `(v ~T0 @X0 1 ef2`i`i ]
 {
 [e :U _motorControl ]
 [v _status `i ~T0 @X0 1 r1 ]
 [v _direction `i ~T0 @X0 1 r2 ]
 [f ]
-"98
+"114
 [e $ ! && == _status -> 1 `i == _direction -> 6 `i 85  ]
-"99
+"115
 {
-"100
+"116
 [e = _PORTB -> -> 6 `i `uc ]
-"101
+"117
 }
 [e :U 85 ]
-"103
+"119
 [e $ ! && == _status -> 1 `i == _direction -> 5 `i 86  ]
-"104
+"120
 {
-"105
+"121
 [e = _PORTB -> -> 5 `i `uc ]
-"106
+"122
 }
 [e :U 86 ]
-"108
+"124
 [e :UE 84 ]
 }
-"110
+"126
 [v _bitStatus `(v ~T0 @X0 1 ef ]
-"111
+"127
 {
 [e :U _bitStatus ]
 [f ]
-"112
+"128
 [e = . . _PORTBbits 0 3 -> ~ -> . . _PORTBbits 0 3 `i `uc ]
-"113
+"129
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"114
+"130
 [e :UE 87 ]
 }

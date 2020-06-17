@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.20 build 20200408173844 
-                                                                                               Sun Jun 14 23:47:43 2020
+                                                                                               Mon Jun 15 16:13:40 2020
 
 Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1 
      1                           	processor	16F87
@@ -218,7 +218,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
    204 ;;
    205 ;; *************** function _main *****************
    206 ;; Defined at:
-   207 ;;		line 38 in file "Main.c"
+   207 ;;		line 53 in file "Main.c"
    208 ;; Parameters:    Size  Location     Type
    209 ;;		None
    210 ;; Auto vars:     Size  Location     Type
@@ -256,18 +256,18 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
    242                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
    243                           
    244                           
-   245                           ;Main.c: 40:     configMCU();
+   245                           ;Main.c: 55:     configMCU();
    246  07A6  118A  2798  118A   	fcall	_configMCU
    247                           
-   248                           ;Main.c: 41:     configPINS();
+   248                           ;Main.c: 56:     configPINS();
    249  07A9  118A  2799  118A   	fcall	_configPINS
    250  07AC                     l668:
    251                           
-   252                           ;Main.c: 42:     bitStatus();
+   252                           ;Main.c: 57:     bitStatus();
    253  07AC  118A  27BD  118A   	fcall	_bitStatus
    254  07AF                     l670:
    255                           
-   256                           ;Main.c: 45:     {;Main.c: 47:        motorControl(1, 0b110);
+   256                           ;Main.c: 60:     {;Main.c: 62:        motorControl(1, 0b110);
    257  07AF  3001               	movlw	1
    258  07B0  00F0               	movwf	motorControl@status
    259  07B1  3000               	movlw	0
@@ -285,7 +285,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
    271  07DA                     __ptext1:	
    272 ;; *************** function _motorControl *****************
    273 ;; Defined at:
-   274 ;;		line 96 in file "Main.c"
+   274 ;;		line 112 in file "Main.c"
    275 ;; Parameters:    Size  Location     Type
    276 ;;  status          2    0[COMMON] int 
    277 ;;  direction       2    2[COMMON] int 
@@ -375,7 +375,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
    361  0799                     __ptext2:	
    362 ;; *************** function _configPINS *****************
    363 ;; Defined at:
-   364 ;;		line 78 in file "Main.c"
+   364 ;;		line 94 in file "Main.c"
    365 ;; Parameters:    Size  Location     Type
    366 ;;		None
    367 ;; Auto vars:     Size  Location     Type
@@ -429,7 +429,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
    415  0798                     __ptext3:	
    416 ;; *************** function _configMCU *****************
    417 ;; Defined at:
-   418 ;;		line 58 in file "Main.c"
+   418 ;;		line 74 in file "Main.c"
    419 ;; Parameters:    Size  Location     Type
    420 ;;		None
    421 ;; Auto vars:     Size  Location     Type
@@ -470,7 +470,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
    456  07BD                     __ptext4:	
    457 ;; *************** function _bitStatus *****************
    458 ;; Defined at:
-   459 ;;		line 110 in file "Main.c"
+   459 ;;		line 126 in file "Main.c"
    460 ;; Parameters:    Size  Location     Type
    461 ;;		None
    462 ;; Auto vars:     Size  Location     Type
@@ -680,7 +680,7 @@ DATA                 0      0       0      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.20 build 20200408173844 
-Symbol Table                                                                                   Sun Jun 14 23:47:43 2020
+Symbol Table                                                                                   Mon Jun 15 16:13:40 2020
 
                      l30 07A5                       l27 0798                       l35 07FC  
                      l38 07D9                       u10 07C9                       u11 07C5  

@@ -1,3 +1,4 @@
+// <editor-fold defaultstate="collapsed" desc="1º Passo - Cabeçalho">
 /*
  * File:   Main.c
  * Author: Guilherme Lopes
@@ -9,8 +10,9 @@
  * microcontrolada com um PIC16F87
  * 
  *  */
+// </editor-fold>
 
-
+// <editor-fold defaultstate="collapsed" desc="2º Passo - Bibliotecas e Diretivas">
 
 #include <xc.h>
 #define _XTAL_FREQ 8000000UL //definir a constante 8MHz com esse nome pois
@@ -29,11 +31,24 @@
 #define DIR 0b110 //roda o motor para direita
 #define ESQ 0b101 //roda o motor para a esquerda
 
+
+// </editor-fold>
+
+// <editor-fold defaultstate="collapsed" desc="3º Passo - Váriaveis Locais">
+
+
+// </editor-fold>
+
+// <editor-fold defaultstate="collapsed" desc="4º Passo - Protótipo de Funções">
+
 void configMCU(); //CONFIG FUSES
 void configPINS(); //CONFIG PINS
 void motorControl(int status, int direction);
 void bitStatus();//função para testar sequencia do algoritmo
 
+// </editor-fold>
+
+// <editor-fold defaultstate="collapsed" desc="5º Passo - Função Principal">
 
 void main(void) {
     
@@ -52,8 +67,9 @@ void main(void) {
     return;
 }
 
+// </editor-fold>
 
-
+// <editor-fold defaultstate="collapsed" desc="6º Passo - Funções Auxiliares">
 
 void configMCU()
 {
@@ -112,3 +128,24 @@ void bitStatus()//função para testar sequencia do algoritmo
     LED =~ LED;
     __delay_ms(1000);
 }
+
+// </editor-fold>
+
+// <editor-fold defaultstate="collapsed" desc="7º Passo - Tratamento de Interrupções">
+/*void interrupt high_priority trata_ints(void)
+{
+    
+}
+*/
+// </editor-fold>
+
+
+
+
+
+
+
+
+
+
+

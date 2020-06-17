@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\GUILHE~1\AppData\Local\Temp\sh14.o
+$C:\Users\GUILHE~1\AppData\Local\Temp\sllo.o
 end_init CODE 0 0 0 2 2
 config CONFIG 4 2007 2007 2 2
 $dist/default/production\Ponte_H.X.production.o
@@ -69,38 +69,38 @@ STRING 800-FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Ponte_H.X.production.o
-7FD cinit CODE >313:C:\Users\GUILHE~1\AppData\Local\Temp\sh14.s
-7FD cinit CODE >316:C:\Users\GUILHE~1\AppData\Local\Temp\sh14.s
-7FD cinit CODE >322:C:\Users\GUILHE~1\AppData\Local\Temp\sh14.s
-7FD cinit CODE >324:C:\Users\GUILHE~1\AppData\Local\Temp\sh14.s
-7FE cinit CODE >325:C:\Users\GUILHE~1\AppData\Local\Temp\sh14.s
-7BD text4 CODE >110:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-7BD text4 CODE >112:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-7CC text4 CODE >113:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-7D9 text4 CODE >114:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-798 text3 CODE >58:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-798 text3 CODE >76:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-799 text2 CODE >78:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-799 text2 CODE >81:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-79C text2 CODE >82:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-79D text2 CODE >83:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-79E text2 CODE >84:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-79F text2 CODE >86:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-7A2 text2 CODE >87:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-7A3 text2 CODE >88:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-7A4 text2 CODE >89:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-7A5 text2 CODE >92:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-7DA text1 CODE >96:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-7DA text1 CODE >98:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-7E7 text1 CODE >100:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-7EB text1 CODE >103:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-7F8 text1 CODE >105:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-7FC text1 CODE >108:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-7A6 maintext CODE >38:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-7A6 maintext CODE >40:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-7A9 maintext CODE >41:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-7AC maintext CODE >42:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
-7AF maintext CODE >47:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+7FD cinit CODE >313:C:\Users\GUILHE~1\AppData\Local\Temp\sllo.s
+7FD cinit CODE >316:C:\Users\GUILHE~1\AppData\Local\Temp\sllo.s
+7FD cinit CODE >322:C:\Users\GUILHE~1\AppData\Local\Temp\sllo.s
+7FD cinit CODE >324:C:\Users\GUILHE~1\AppData\Local\Temp\sllo.s
+7FE cinit CODE >325:C:\Users\GUILHE~1\AppData\Local\Temp\sllo.s
+7BD text4 CODE >126:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+7BD text4 CODE >128:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+7CC text4 CODE >129:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+7D9 text4 CODE >130:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+798 text3 CODE >74:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+798 text3 CODE >92:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+799 text2 CODE >94:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+799 text2 CODE >97:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+79C text2 CODE >98:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+79D text2 CODE >99:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+79E text2 CODE >100:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+79F text2 CODE >102:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+7A2 text2 CODE >103:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+7A3 text2 CODE >104:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+7A4 text2 CODE >105:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+7A5 text2 CODE >108:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+7DA text1 CODE >112:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+7DA text1 CODE >114:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+7E7 text1 CODE >116:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+7EB text1 CODE >119:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+7F8 text1 CODE >121:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+7FC text1 CODE >124:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+7A6 maintext CODE >53:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+7A6 maintext CODE >55:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+7A9 maintext CODE >56:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+7AC maintext CODE >57:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
+7AF maintext CODE >62:C:\Users\Guilherme Lopes\MPLABXProjects\Ponte_H.X\Main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -121,19 +121,19 @@ __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\GUILHE~1\AppData\Local\Temp\sh14.o
+___sp 0 0 STACK 2 stack C:\Users\GUILHE~1\AppData\Local\Temp\sllo.o
 _main F4C 0 CODE 0 maintext dist/default/production\Ponte_H.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Ponte_H.X.production.o
-start 0 0 CODE 0 init C:\Users\GUILHE~1\AppData\Local\Temp\sh14.o
+start 0 0 CODE 0 init C:\Users\GUILHE~1\AppData\Local\Temp\sllo.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Ponte_H.X.production.o
 __size_of_configPINS 0 0 ABS 0 - dist/default/production\Ponte_H.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\GUILHE~1\AppData\Local\Temp\sh14.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\GUILHE~1\AppData\Local\Temp\sh14.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\GUILHE~1\AppData\Local\Temp\sh14.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\GUILHE~1\AppData\Local\Temp\sh14.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\GUILHE~1\AppData\Local\Temp\sh14.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\GUILHE~1\AppData\Local\Temp\sh14.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\GUILHE~1\AppData\Local\Temp\sllo.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\GUILHE~1\AppData\Local\Temp\sllo.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\GUILHE~1\AppData\Local\Temp\sllo.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\GUILHE~1\AppData\Local\Temp\sllo.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\GUILHE~1\AppData\Local\Temp\sllo.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\GUILHE~1\AppData\Local\Temp\sllo.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Ponte_H.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
@@ -141,13 +141,13 @@ __end_of_configMCU F32 0 CODE 0 text3 dist/default/production\Ponte_H.X.producti
 __size_of_configMCU 0 0 ABS 0 - dist/default/production\Ponte_H.X.production.o
 _configMCU F30 0 CODE 0 text3 dist/default/production\Ponte_H.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\GUILHE~1\AppData\Local\Temp\sh14.o
-___stacklo 0 0 ABS 0 - C:\Users\GUILHE~1\AppData\Local\Temp\sh14.o
+___stackhi 0 0 ABS 0 - C:\Users\GUILHE~1\AppData\Local\Temp\sllo.o
+___stacklo 0 0 ABS 0 - C:\Users\GUILHE~1\AppData\Local\Temp\sllo.o
 _motorControl FB4 0 CODE 0 text1 dist/default/production\Ponte_H.X.production.o
 start_initialization FFA 0 CODE 0 cinit dist/default/production\Ponte_H.X.production.o
 _TRISBbits 86 0 ABS 0 - dist/default/production\Ponte_H.X.production.o
 __size_of_motorControl 0 0 ABS 0 - dist/default/production\Ponte_H.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\GUILHE~1\AppData\Local\Temp\sh14.o
+___int_sp 0 0 STACK 2 stack C:\Users\GUILHE~1\AppData\Local\Temp\sllo.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -187,7 +187,7 @@ __S1 74 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\GUILHE~1\AppData\Local\Temp\sh14.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\GUILHE~1\AppData\Local\Temp\sllo.o
 __pmaintext F4C 0 CODE 0 maintext dist/default/production\Ponte_H.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
